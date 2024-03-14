@@ -1,13 +1,21 @@
 #apresentar a pergunta e opções
 print('QUAL É O VERDADEIRO NOME DO BATMAN?')
-print('a-Bruce Wayne b-Clark Kent c-Peter Parker d-Tony Stark e-Steve Rogers')
+print('a) Bruce Wayne')
+print('b) Clark Kent')
+print('c) Peter Parker')
+print('d) Tony Stark')
+print('e) Steve Rogers')
 
 #variavel correta
-respostacorreta='a'
+respostacorreta='a) Bruce Wayne'
 
 #usuario insere a resposta
 respostadousuario=str(input('insira a alternativa correta:'))
 
 #resposta correta
-print('você digitou a resposta', respostadousuario,'. a resposta correta é', respostacorreta,'.')
+if respostadousuario =='a' : print('Sua resposta está correta')
+else:
+    print('Sua resposta está incoreta. Tente novamente!')
+
+#print('Você digitou a resposta', respostadousuario,'. A resposta correta é', respostacorreta)
 

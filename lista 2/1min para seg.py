@@ -1,4 +1,8 @@
 # comando de entrada
-tempo = int(input("informe o tempo em minutos:"))
+tempo = float(input("informe o tempo em minutos:"))
 
-print(tempo * 60)
+#converter em seg
+segundos = tempo * 60
+
+
+print(tempo,'minutos em segundos é:', segundos,'seg.')

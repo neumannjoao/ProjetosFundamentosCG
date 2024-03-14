@@ -4,5 +4,8 @@ quilos = float(input("insira o peso do prato:"))
 # valor do quilo
 quilo = 40
 
+#valor do prato
+valorprato = quilos * quilo
+
 #valor à pagar
-print(quilos * quilo)
+print('Valor a pagar: R$', valorprato)

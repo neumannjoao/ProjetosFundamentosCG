@@ -1,8 +1,11 @@
 #comando de entrada
-quantidade = int(input("informe a quantidade de dólares desejada:"))
+quantidade = float(input("informe a quantidade de dólares desejada:"))
 
 # cotação do dolar
-dolar = 4.95
+dolar = 4.97
 
 #conversão
-print(quantidade * dolar)
+reais = quantidade * dolar
+
+#resultado
+print ('Para comprar U$', quantidade, 'dólares, você deverá pagar R$', reais)

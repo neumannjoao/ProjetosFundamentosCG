@@ -10,7 +10,5 @@ for i in range (3):
         print("Sua resposta está abaixo do número sorteado!")
     elif resposta > sorteado:
         print ("Sua resposta está acima do número sorteado!")
-    elif resposta == sorteado:
-        print ("Parabéns!! \nvocê acertou!")
     else:        
-        print("As suas tentativas foram esgotadas! :(")
+        print ("Parabéns!! \nvocê acertou!")

@@ -79,10 +79,13 @@ print("A quantidade de números negativos é: ", numeros_negativos)"""
 
 #---------------------------------------------------------------------------------#
 #h) Ler n números e imprimir no final a soma dos números lidos
-soma=0
+"""soma=0
 n = int(input("digite a quantidade de números:"))
 for i in range (n):
-    numero = float(input("digite o {}° número". format (i+1)))
+    numero = float(input("digite o {}° número: ". format (i+1)))
     soma += numero
 
-print("A soma dos {} numeros é: {}".format(n, soma))
+print("A soma dos {} numeros é: {}".format(n, soma))"""
+
+#---------------------------------------------------------------------------------#
+

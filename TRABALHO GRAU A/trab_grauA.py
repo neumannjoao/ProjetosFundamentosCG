@@ -1,9 +1,6 @@
 import random
 import os
 
-############  VARIÁVEIS ############
-
-
 ############  FUNÇÕES ############
 
 #rodar a roleta
@@ -13,12 +10,6 @@ def roleta():
 #regra do dado
 def rolar_dado ():
     dado = random.randint (1,6)
-    if dado == 1:
-        jogador["posicao"] + 1
-    elif dado == 3:
-        jogador["posicao"] - 1
-    elif dado == 6:
-        print("Você perdeu uma rodada")
 
 #regra da morte
 
@@ -87,20 +78,28 @@ def main():
 
             jogador ['posicao'] += num_roleta
 
-            if jogador ['posicao'] == 1 or jogador ['posicao'] == 3 or jogador ['posicao'] == 10 or jogador ['posicao'] == 17:
-               rolar_dado()
-               print(jogadores)
-            elif
+            if jogador['posicao'] in [1, 3, 10, 17]:
+                rolar_dado()
+                if dado == 1:
+                    jogador["posicao"] += 1
+                elif dado == 3:
+                    jogador["posicao"] -= 1
+                elif dado == 6:
+                    print("Você perdeu uma rodada")
 
+               
 
         
 
 
-posicao_jogador1 = 0
+
+
+
+"""posicao_jogador1 = 0
 filhos_jogador1 = 0
 dinheiro_jogador1 = 0
 jogador1Casado = False
 jogador1Divorciado = False
 jogador1Formado = False
 jogador1Famoso = False
-jogador1Vivo = True
+jogador1Vivo = True"""

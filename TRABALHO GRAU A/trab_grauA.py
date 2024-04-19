@@ -86,6 +86,16 @@ def main():
                     jogador["posicao"] -= 1
                 elif dado == 6:
                     print("Você perdeu uma rodada")
+            
+            print(f"Status de {jogador['nome']}:")
+            print(f"Posição: {jogador['posicao']}")
+            print(f"Número de filhos: {jogador['filhos']}")
+            print(f"Dinheiro: {jogador['dinheiro']}")
+            print(f"Casado: {jogador['casado']}")
+            print(f"Divorciado: {jogador['divorciado']}")
+            print(f"Famoso: {jogador['famoso']}")
+            print(f"Formado: {jogador['formado']}")
+            print(f"Vivo: {jogador['vivo']}")
 
                
 

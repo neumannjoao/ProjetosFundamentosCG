@@ -70,8 +70,7 @@ def main():
         "posicao": 0,
         "relacionamento": "Solteiro",
         "fama": "Desconhecido",
-        "filhos": 0,
-        "vivo": True
+        "filhos": 0
     }
 
     jogador2 = {
@@ -79,8 +78,7 @@ def main():
         "posicao": 0,
         "relacionamento": "Solteiro",
         "fama": "Desconhecido",
-        "filhos": 0,
-        "vivo": True
+        "filhos": 0
     }
 
     jogadores = [jogador1, jogador2]
@@ -92,12 +90,11 @@ def main():
             input("Pressione ENTER para girar a roleta...")
             valor_dado = rolar_dado()
             print(f"Você tirou {valor_dado}.")
-            
+
             jogador["posicao"] += valor_dado
 
             if jogador["posicao"] == 2 or jogador["posicao"] == 8 or jogador["posicao"] == 18:
                 print("Você morreu e perdeu o jogo!")
-                jogador["vivo"] = False
                 vencedor = next(x for x in jogadores if x != jogador)
                 break
 
@@ -145,15 +142,7 @@ def main():
                 vencedor = jogador
                 break
 
-            print(f"Status de {jogador['nome']}:")
-            print(f"Posição: {jogador['posicao']}")
-            print(f"Filhos: {jogador['filhos']}")
-            print(f"Dinheiro: {jogador['fama']}")
-            print(f"Casado: {jogador['relacionamento'] == 'Casado'}")
-            print(f"Divorciado: {jogador['relacionamento'] == 'Solteiro'}")
-            print(f"Formado: {jogador['fama'] == 'Ficou famoso!'}")
-            print(f"Famoso: {jogador['fama'] == 'Ficou famoso!'}")
-            print(f"Vivo: {jogador['vivo']}")
+            print(f"Posição de {jogador['nome']}: {jogador['posicao']}")
 
     print(f"O jogador {vencedor['nome']} venceu o jogo!")
 

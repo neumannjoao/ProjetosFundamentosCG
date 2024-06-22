@@ -36,3 +36,4 @@ print("A média dos valores do vetor é:", media)
 #e) maior valor
 maior_valor = max(v)
 print("o maior valor é o:", maior_valor)
+

@@ -14,16 +14,20 @@ def salvar(nome_arquivo, matriz):
 
 
 def CadastrarFelino(matriz):
-    nome = input('Digite o Nome do Felino: ')
-    sexo = input('Digite o sexo do Felino (M ou F): ')
-    idade = input('Digite a idade do Felino: ')
-    raca = input('Digite a raça do Felino: ')
-    cor = input('Digite a cor predominante do Felino: ')
-    castrado = input('O felino é castrado? (S ou N): ')
-    data_resgate = input('Digite a data do resgate: [dd/mm/aaaa]')
-    adotado = input('O felino foi adotado? (S ou N): ')
-    nova_linha = [nome, sexo, idade, raca, cor, castrado, data_resgate, adotado]
-    matriz.append(nova_linha)
+    while True:
+        nome = input('Digite o Nome do Felino (ou digite 0 para voltar ao menu principal): ')
+        if nome == '0':
+            print("Voltando ao menu principal...")
+            break
+        sexo = input('Digite o sexo do Felino (M ou F): ')
+        idade = input('Digite a idade do Felino: ')
+        raca = input('Digite a raça do Felino: ')
+        cor = input('Digite a cor predominante do Felino: ')
+        castrado = input('O felino é castrado? (S ou N): ')
+        data_resgate = input('Digite a data do resgate: [dd/mm/aaaa]')
+        adotado = input('O felino foi adotado? (S ou N): ')
+        nova_linha = [nome, sexo, idade, raca, cor, castrado, data_resgate, adotado]
+        matriz.append(nova_linha)
 
     print("Novo felino cadastrado com sucesso.")
 

@@ -1,25 +1,18 @@
 import csv
 
-# Função para carregar os dados do arquivo CSV
-def carregar_dados_csv(nome_arquivo):
-    try:
-        with open(nome_arquivo, 'r', newline='') as csvfile:
-            reader = csv.reader(csvfile, delimiter=';')
-            matriz = list(reader)
-        return matriz
-    except FileNotFoundError:
-        print(f"Arquivo '{nome_arquivo}' não encontrado. Iniciando com matriz vazia.")
-        return []
+# Leitura do arquivo CSV
+with open('registros.csv', 'r', newline='') as csvfile:
+    reader = csv.reader(csvfile, delimiter=';')
+    matriz = list(reader)
 
-# Função para salvar a matriz de volta no arquivo CSV
-def salvar_dados_csv(nome_arquivo, matriz):
+
+def salvar(nome_arquivo, matriz):
     with open(nome_arquivo, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter=';')
         for linha in matriz:
             writer.writerow(linha)
-    print(f"Dados salvos no arquivo '{nome_arquivo}' com sucesso.")
 
-# Função para cadastrar um novo felino na matriz
+
 def CadastrarFelino(matriz):
     nome = input('Digite o Nome do Felino: ')
     sexo = input('Digite o sexo do Felino (M ou F): ')
@@ -34,7 +27,7 @@ def CadastrarFelino(matriz):
 
     print("Novo felino cadastrado com sucesso.")
 
-# Função para alterar o status de um felino na matriz
+
 def alterar_status(matriz):
     while True:
         print("******* Lista de Felinos *******")
@@ -69,16 +62,11 @@ def alterar_status(matriz):
                     except ValueError:
                         print("Por favor, digite um número válido.")
             else:
-                print("Número de felino inválido. Por favor, digite um número válido para escolher o felino.")
-                break
-            
-# Nome do arquivo CSV
-nome_arquivo = 'registros.csv'
+                print("Número de felino inválido.")
+        except ValueError:
+            print("Por favor, digite um número válido para escolher o felino.")
 
-# Carregar dados do arquivo CSV para a matriz inicial
-matriz = carregar_dados_csv(nome_arquivo)
-
-########################## Código Principal ##########################
+########################## Código ##########################
 while True:  
     print ('******* MENU *******')
     print('1) Cadastrar felino ')
@@ -95,14 +83,14 @@ while True:
         CadastrarFelino(matriz)
     elif opcaousuario == '2':
         alterar_status(matriz)
-    #elif opcaousuario == '3':
-        #
-    #elif opcaousuario == '4':
-        #
-    #elif opcaousuario == '5':
-        #
+    # elif opcaousuario == '3':
+    #     consultar_informacoes(matriz)
+    # elif opcaousuario == '4':
+    #     apresentar_estatisticas(matriz)
+    # elif opcaousuario == '5':
+    #     filtragem_dados(matriz)
     elif opcaousuario == '6':
-        salvar_dados_csv(nome_arquivo, matriz)
+        salvar('registros.csv', matriz)
     elif opcaousuario == '7':
         print("Saindo do programa...")
         break

@@ -1,0 +1,121 @@
+Aqui está o conteúdo em formato de código para facilitar a inclusão no GitHub:
+
+```markdown
+# Programação Orientada a Objetos (POO)
+
+## 1. Conceitos Principais
+
+### Classe
+- Define as propriedades (atributos) e comportamentos (métodos) dos objetos.
+- Exemplo:
+  ```python
+  class Pessoa:
+      def __init__(self, nome, idade):
+          self.nome = nome
+          self.idade = idade
+  ```
+
+### Objeto
+- Instância de uma classe, com seus próprios atributos e métodos.
+- Exemplo:
+  ```python
+  p1 = Pessoa("Ana", 30)  # p1 é um objeto da classe Pessoa
+  ```
+
+### Atributo
+- Variáveis que representam características de um objeto.
+- Exemplo:
+  ```python
+  self.nome = nome
+  self.idade = idade
+  ```
+
+### Método
+- Funções que definem o comportamento de um objeto.
+- Exemplo:
+  ```python
+  class Pessoa:
+      def falar(self):
+          print("Olá, eu sou uma pessoa!")
+  ```
+
+## 2. Princípios da POO
+
+### Encapsulamento
+- Protege os dados do objeto, limitando o acesso externo.
+- Exemplo:
+  ```python
+  class Pessoa:
+      def __init__(self, nome):
+          self.__nome = nome  # Atributo privado
+  ```
+
+### Herança
+- Permite que uma classe herde atributos e métodos de outra.
+- Exemplo:
+  ```python
+  class Funcionario(Pessoa):
+      def __init__(self, nome, cargo):
+          super().__init__(nome)
+          self.cargo = cargo
+  ```
+
+### Polimorfismo
+- Habilidade de um método funcionar de diferentes maneiras, dependendo da classe.
+- Exemplo:
+  ```python
+  class Animal:
+      def emitir_som(self):
+          pass
+  
+  class Cachorro(Animal):
+      def emitir_som(self):
+          print("Latido")
+
+  class Gato(Animal):
+      def emitir_som(self):
+          print("Miau")
+  ```
+
+### Abstração
+- Expõe apenas os detalhes essenciais de um objeto, escondendo a complexidade.
+- Exemplo:
+  ```python
+  from abc import ABC, abstractmethod
+
+  class Forma(ABC):
+      @abstractmethod
+      def area(self):
+          pass
+  ```
+
+## 3. Exemplo Completo em Python
+```python
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def apresentar(self):
+        print(f"Olá, meu nome é {self.nome} e tenho {self.idade} anos.")
+
+class Funcionario(Pessoa):
+    def __init__(self, nome, idade, cargo):
+        super().__init__(nome, idade)
+        self.cargo = cargo
+
+    def apresentar(self):
+        print(f"Olá, sou {self.nome}, trabalho como {self.cargo}.")
+
+p1 = Funcionario("João", 28, "Engenheiro")
+p1.apresentar()  # Saída: Olá, sou João, trabalho como Engenheiro.
+```
+
+## 4. Vantagens da POO
+- Reutilização de código (herança).
+- Organização e manutenção mais fáceis.
+- Modelagem de problemas do mundo real.
+- Facilita a criação de programas grandes e complexos.
+```
+
+Esse código em Markdown está formatado para que você possa copiar diretamente para o GitHub, criando um README ou documentação no seu repositório.

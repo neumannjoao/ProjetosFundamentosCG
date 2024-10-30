@@ -1,0 +1,12 @@
+O CLIENTE chega no HOTEL dizendo que deseja RESERVAR um QUARTO para uma ou mais noites
+O atendente solicita ao CLIENTE seus dados de identificação
+O CLIENTE fornece seus dados
+O atendente informa ao sistema os dados de identificação do CLIENTE
+O sistema exibe os quartos e datas disponíveis
+O atendente solicita ao CLIENTE o numero de noites que ele quer RESERVAR
+O CLIENTE informa o número de noites
+O atendente informa o número de noites ao sistema
+O sistema gera o pix para pagamento da estadia
+O CLIENTE faz o pagamento e recebe a chave do QUARTO
+
+https://online.visual-paradigm.com/w/xsfhpfmb/diagrams/#diagram:proj=0&type=ClassDiagram&width=11&height=8.5&unit=inch

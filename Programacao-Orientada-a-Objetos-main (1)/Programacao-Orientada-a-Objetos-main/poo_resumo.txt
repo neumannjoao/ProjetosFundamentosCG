@@ -1,0 +1,111 @@
+
+Programação Orientada a Objetos (POO)
+
+1. Classe:
+   - Modelo ou "fábrica" de objetos. Define os atributos (características) e métodos (comportamentos).
+   Exemplo:
+   class Pessoa:
+       def __init__(self, nome, idade):
+           self.nome = nome
+           self.idade = idade
+
+2. Objeto:
+   - Instância de uma classe. Ex: p1 = Pessoa("Ana", 30)
+
+3. Atributos:
+   - Características do objeto. Ex: nome, idade.
+
+4. Métodos:
+   - Comportamentos do objeto. Ex: falar(), correr().
+
+5. Encapsulamento:
+   - Protege os dados do objeto. Atributos privados começam com '__' (duplo underline).
+   Exemplo: self.__nome = nome
+
+6. Herança:
+   - Uma classe pode herdar atributos e métodos de outra.
+   Exemplo:
+   class Funcionario(Pessoa):
+       def __init__(self, nome, cargo):
+           super().__init__(nome)
+           self.cargo = cargo
+
+7. Polimorfismo:
+   - Métodos com o mesmo nome podem ter comportamentos diferentes em classes diferentes.
+   Exemplo:
+   class Animal:
+       def emitir_som(self):
+           pass
+
+   class Cachorro(Animal):
+       def emitir_som(self):
+           print("Latido")
+
+   class Gato(Animal):
+       def emitir_som(self):
+           print("Miau")
+
+8. Abstração:
+   - Esconde a complexidade, mostrando apenas o essencial. Classes abstratas têm métodos que precisam ser implementados nas subclasses.
+
+9. Getter e Setter:
+   - **Getter:** Acessa o valor de um atributo privado ou protegido.
+   - **Setter:** Modifica o valor de um atributo privado ou protegido, garantindo que regras de validação sejam respeitadas.
+   Exemplo:
+   class Pessoa:
+       def __init__(self, nome, idade):
+           self.__nome = nome  # Atributo privado
+           self.__idade = idade  # Atributo privado
+
+       # Getter para o atributo 'nome'
+       def get_nome(self):
+           return self.__nome
+
+       # Setter para o atributo 'nome'
+       def set_nome(self, nome):
+           if len(nome) > 0:  # Verifica se o nome não está vazio
+               self.__nome = nome
+           else:
+               print("Nome inválido")
+
+       # Getter para o atributo 'idade'
+       def get_idade(self):
+           return self.__idade
+
+       # Setter para o atributo 'idade'
+       def set_idade(self, idade):
+           if idade > 0:  # Verifica se a idade é positiva
+               self.__idade = idade
+           else:
+               print("Idade inválida")
+
+   # Exemplo de utilização:
+   p = Pessoa("Ana", 25)
+   print(p.get_nome())  # Saída: Ana
+   p.set_nome("Maria")  # Mudando o nome
+   print(p.get_nome())  # Saída: Maria
+
+10. Exemplo Completo:
+   class Pessoa:
+       def __init__(self, nome, idade):
+           self.nome = nome
+           self.idade = idade
+
+       def apresentar(self):
+           print(f"Olá, sou {self.nome} e tenho {self.idade} anos.")
+
+   class Funcionario(Pessoa):
+       def __init__(self, nome, idade, cargo):
+           super().__init__(nome, idade)
+           self.cargo = cargo
+
+       def apresentar(self):
+           print(f"Olá, sou {self.nome} e trabalho como {self.cargo}.")
+
+   p1 = Funcionario("João", 28, "Engenheiro")
+   p1.apresentar()  # Olá, sou João e trabalho como Engenheiro.
+
+11. Vantagens da POO:
+    - Reutilização de código.
+    - Organização e manutenção facilitadas.
+    - Modela problemas do mundo real de forma natural.
